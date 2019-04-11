@@ -69,6 +69,6 @@ abstract class BaseActivity : AppCompatActivity(), IBaseView {
 
     override fun attachBaseContext(newBase: Context?) {
         super.attachBaseContext(newBase)
-        AppUtils.changeSystemLanguage(newBase, Locale.ENGLISH)
+        AppUtils.changeSystemLanguage(newBase, Locale.CHINESE)
     }
 }
