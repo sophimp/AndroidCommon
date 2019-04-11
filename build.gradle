@@ -1,0 +1,30 @@
+apply{
+    from "$rootDir.path/config_lib.gradle"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    api dep.gson
+    api dep.support.appcompat_v7
+    api dep.support.design
+    api dep.kotlinlib
+//    api dep.anko
+//    api dep.kotlin
+    api dep.support.multidex
+    api dep.constraint
+    api(dep.glide) {
+        exclude group: "com.android.support"
+    }
+//    api dep.free_proguard
+    api 'com.r0adkll:slidableactivity:2.0.5'
+
+    compileOnly dep.leakcanary.android_no_op
+//    api dep.support.multidex
+//    api dep.constraint
+    testImplementation dep.junit
+    testImplementation dep.robolectric
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
