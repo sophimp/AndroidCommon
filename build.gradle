@@ -13,7 +13,7 @@ dependencies {
 //    api dep.anko
 //    api dep.kotlin
     api dep.androidx.multidex
-    api dep.constraint
+    api dep.androidx.constraint
     api(dep.glide) {
         exclude group: "com.android.support"
     }
