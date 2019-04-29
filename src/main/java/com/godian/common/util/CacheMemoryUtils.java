@@ -1,7 +1,9 @@
 package com.godian.common.util;
 
-import android.support.annotation.NonNull;
-import android.support.v4.util.LruCache;
+
+import android.util.LruCache;
+
+import androidx.annotation.NonNull;
 
 import com.godian.common.constant.CacheConstants;
 

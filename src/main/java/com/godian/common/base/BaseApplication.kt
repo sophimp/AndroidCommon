@@ -2,7 +2,7 @@ package com.godian.common.base
 
 import android.app.Application
 import android.content.Context
-import android.support.multidex.MultiDex
+import androidx.multidex.MultiDex
 import com.godian.common.util.AppUtils
 import com.godian.common.util.CrashUtils
 import com.godian.common.util.LogUtils

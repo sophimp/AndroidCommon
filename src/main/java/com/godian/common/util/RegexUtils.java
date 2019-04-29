@@ -1,6 +1,7 @@
 package com.godian.common.util;
 
-import android.support.v4.util.SimpleArrayMap;
+
+import androidx.collection.SimpleArrayMap;
 
 import com.godian.common.constant.RegexConstants;
 

@@ -7,12 +7,12 @@ dependencies {
 //    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     api dep.gson
-    api dep.support.appcompat_v7
-    api dep.support.design
+    api dep.androidx.appcompat
+    api dep.androidx.design
     api dep.kotlinlib
 //    api dep.anko
 //    api dep.kotlin
-    api dep.support.multidex
+    api dep.androidx.multidex
     api dep.constraint
     api(dep.glide) {
         exclude group: "com.android.support"

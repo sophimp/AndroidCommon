@@ -3,9 +3,9 @@ package com.godian.common.base
 import android.app.Activity
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.godian.common.util.AntiShakeUtils
 import com.godian.common.util.AppUtils
 import com.godian.common.util.ToastUtils

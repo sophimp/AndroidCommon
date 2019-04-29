@@ -3,7 +3,8 @@ package com.godian.common.util;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

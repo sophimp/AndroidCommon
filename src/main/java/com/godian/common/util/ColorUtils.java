@@ -1,12 +1,13 @@
 package com.godian.common.util;
 
 import android.graphics.Color;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.FloatRange;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.FloatRange;
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 
 /**
  * <pre>
@@ -147,7 +148,6 @@ public final class ColorUtils {
      *
      * @param colorString The color-string.
      * @return color-int
-     * @throws IllegalArgumentException The string cannot be parsed.
      */
     public static int string2Int(@NonNull String colorString) {
         return Color.parseColor(colorString);

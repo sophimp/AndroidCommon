@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fl_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_title" />
+
+
+    <TextView
+        android:id="@+id/tv_btn_dialog_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_40"
+        android:gravity="center"
+        android:padding="@dimen/spacing_8"
+        android:text="@string/cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_btn_dialog_confirm"
+        app:layout_constraintTop_toBottomOf="@id/fl_dialog_content" />
+
+    <TextView
+        android:id="@+id/tv_btn_dialog_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_40"
+        android:gravity="center"
+        android:padding="@dimen/spacing_8"
+        android:text="@string/confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_btn_dialog_cancel"
+        app:layout_constraintTop_toTopOf="@id/tv_btn_dialog_cancel" />
+
+</android.support.constraint.ConstraintLayout>

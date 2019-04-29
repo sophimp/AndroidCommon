@@ -7,6 +7,25 @@
 
     很多类都是直接copy 开源库集合在一起， 类注释不改， 尊重原作者
 
+## 框架构建
+1. 组件化
+
+2. 插件化
+
+3. 设计模式
+
+4. 数据库
+
+5. 网络请求
+
+6. RxJava
+
+7. 日志
+
+8. 单元测试
+
+9. 性能优化
+
 ## 参考资源
 
 * [Blankj/AndroidUtilCode](https://github.com/Blankj/AndroidUtilCode)

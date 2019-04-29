@@ -2,11 +2,12 @@ package com.godian.common.util;
 
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.util.SparseArray;
+
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;

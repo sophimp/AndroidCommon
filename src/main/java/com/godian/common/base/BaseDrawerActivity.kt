@@ -2,10 +2,10 @@ package com.godian.common.base
 
 import android.content.Intent
 import android.net.Uri
-import android.support.annotation.StringRes
-import android.support.v4.widget.DrawerLayout
 import android.view.LayoutInflater
 import android.widget.FrameLayout
+import androidx.annotation.StringRes
+import androidx.drawerlayout.widget.DrawerLayout
 import com.godian.common.R
 import com.godian.common.util.ActivityUtils
 import com.godian.common.util.StringUtils
