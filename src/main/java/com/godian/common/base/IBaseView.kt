@@ -11,13 +11,12 @@ import android.view.View
  * desc  :
  * ```
  */
-interface IBaseView : View.OnClickListener {
+interface IBaseView  {
 
     fun initData(bundle: Bundle?)
     fun bindLayout(): Int
     fun setRootLayout(layoutId: Int)
     fun initView(savedInstanceState: Bundle?, contentView: View)
     fun doBusiness()
-    fun onWidgetClick(view: View)
 
 }

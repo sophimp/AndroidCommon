@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import com.godian.common.util.AntiShakeUtils
 import com.godian.common.util.AppUtils
@@ -25,6 +26,7 @@ abstract class BaseActivity : AppCompatActivity(), IBaseView {
 
     protected lateinit var mContentView: View
     protected lateinit var mActivity: Activity
+    private lateinit var mPresenter: IBasePresenter
 
     abstract fun isSwipeBack(): Boolean
 
@@ -35,7 +37,6 @@ abstract class BaseActivity : AppCompatActivity(), IBaseView {
         setRootLayout(bindLayout())
         initView(savedInstanceState, mContentView)
         doBusiness()
-
         if (isSwipeBack()) {
             Slidr.attach(this)
         }
@@ -50,16 +51,19 @@ abstract class BaseActivity : AppCompatActivity(), IBaseView {
         })
     }
 
+    fun bindPresenter(presenter: IBasePresenter){
+        mPresenter = presenter
+    }
+
+    fun <T : IBasePresenter> getPresenter() : T? {
+        @Suppress("UNCHECKED_CAST")
+        return mPresenter as T
+    }
+
     override fun setRootLayout(layoutId: Int) {
         if (layoutId <= 0) return
         mContentView = LayoutInflater.from(this).inflate(layoutId, null)
         setContentView(mContentView)
-    }
-
-    override fun onClick(view: View) {
-        if (AntiShakeUtils.isValid(view)) {
-            onWidgetClick(view)
-        }
     }
 
     override fun onDestroy() {

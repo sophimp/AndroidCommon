@@ -1,10 +1,8 @@
 package com.godian.common.base
 
-import android.app.DatePickerDialog
-import android.app.Dialog
-import android.app.DialogFragment
 import android.os.Bundle
 import android.view.*
+import androidx.fragment.app.DialogFragment
 import com.godian.common.R
 import kotlinx.android.synthetic.main.dialog_common.*
 
@@ -40,8 +38,7 @@ abstract class BaseDialog : DialogFragment() {
         }
     }
 
-
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         if (animationStyle() != 0) {
             dialog.window.setWindowAnimations(animationStyle())
         }

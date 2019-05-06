@@ -29,10 +29,11 @@ abstract class BaseFragment : Fragment(), IBaseView {
     protected lateinit var mActivity: Activity
     protected lateinit var mInflater: LayoutInflater
     protected lateinit var mContentView: View
+    private lateinit var mPresenter: IBasePresenter
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-        mActivity = context as Activity;
+        mActivity = context as Activity
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,13 +94,17 @@ abstract class BaseFragment : Fragment(), IBaseView {
         super.onDestroy()
     }
 
-    override fun onClick(view: View) {
-        if (AntiShakeUtils.isValid(view)) {
-            onWidgetClick(view)
-        }
-    }
-
     fun <T : View> findViewById(@IdRes id: Int): T {
         return mContentView.findViewById(id)
     }
+
+    fun bindPresenter(presenter: IBasePresenter){
+        mPresenter = presenter
+    }
+
+    fun <T : IBasePresenter> getPresenter() : T? {
+        @Suppress("UNCHECKED_CAST")
+        return mPresenter as T
+    }
+
 }
